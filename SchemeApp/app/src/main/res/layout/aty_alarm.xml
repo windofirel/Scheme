@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="priv.wind.scheme.alarms.AlarmAty">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_account"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        app:titleTextColor="@color/icons"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/TextStyle"
+                android:layout_gravity="center"
+                android:text="@string/a_title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tv_title"
+                style="@style/EditTextStyle"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/DividerTextStyle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/TextStyle"
+                android:layout_gravity="center"
+                android:text="@string/a_begin_time"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tv_begin_time"
+                style="@style/EditTextStyle"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/DividerTextStyle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/TextStyle"
+                android:layout_gravity="center"
+                android:text="@string/a_end_time"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/tv_end_time"
+                style="@style/EditTextStyle"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/DividerTextStyle"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/TextStyle"
+                android:layout_gravity="center"
+                android:text="@string/a_content"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:id="@+id/tv_content"
+                style="@style/TextStyle"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:maxLines="8"
+                android:minLines="4"
+                android:scrollbars="vertical"
+                android:textColor="@color/primary_text"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

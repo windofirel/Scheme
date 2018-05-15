@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="priv.wind.scheme">
+    <uses-permission android:name="om.android.alarm.permission.SET_ALARM"/>
+    <application
+        android:name=".SchemeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_clock"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".mainuis.SchemeAty">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainuis.TimeAty">
+        </activity>
+        <activity android:name=".lockscreens.LockAty">
+        </activity>
+
+        <service
+            android:name=".lockscreens.LockService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <service android:name=".widgets.ListViewService"
+                 android:permission="android.permission.BIND_REMOTEVIEWS"
+                 android:exported="false"
+                 android:enabled="true"/>
+
+        <receiver android:name=".widgets.SchemeWidget">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_provider_info"/>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="com.seewo.homewidgets.action.CLICK"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".mainuis.ConfigAty">
+        </activity>
+
+        <receiver
+            android:name=".alarms.AlarmReceiver"
+            android:process=":remote"
+            >
+            <!--<intent-filter>-->
+                <!--<action android:name="SCHEME_CLOCK"/>-->
+            <!--</intent-filter>-->
+        </receiver>
+
+        <activity android:name=".alarms.AlarmAty">
+        </activity>
+    </application>
+
+</manifest>

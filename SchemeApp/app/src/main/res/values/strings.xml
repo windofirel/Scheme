@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">日程助手</string>
+
+    <!--列表项-->
+    <string name="a_title">标题：</string>
+    <string name="a_begin_time">开始时间：</string>
+    <string name="a_end_time">结束时间：</string>
+    <string name="a_content">内容：</string>
+
+    <!--添加界面资源-->
+    <string name="title_add">新建日程信息</string>
+    <string name="title_edit">修改日程信息</string>
+
+    <!--提示-->
+    <string name="edit_success_tips">修改日程[%s]信息成功</string>
+</resources>
